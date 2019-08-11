@@ -5,8 +5,23 @@ jar {
     enabled = true;
 }
 
+def elasticsearchVersion = '6.6.0'
+def mysqlVersion = '5.1.47'
+def swaggerVersion = '2.5.0'
+
 dependencies {
-    compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.1')
-    runtime('mysql:mysql-connector-java')
-    compile 'com.zaxxer:HikariCP:2.6.2'
+    compile('org.springframework.boot:spring-boot-starter-aop')
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+//    compile('org.elasticsearch:elasticsearch:' + elasticsearchVersion)
+//    compile('org.elasticsearch.client:elasticsearch-rest-client:' + elasticsearchVersion)
+//    compile('org.elasticsearch.client:elasticsearch-rest-high-level-client:' + elasticsearchVersion)
+
+    // https://mvnrepository.com/artifact/mysql/mysql-connector-java
+    compile group: 'mysql', name: 'mysql-connector-java', version: mysqlVersion
+    compile group: 'io.springfox', name: 'springfox-swagger2', version: swaggerVersion
+    compile group: 'io.springfox', name: 'springfox-swagger-ui', version: swaggerVersion
+
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
 }

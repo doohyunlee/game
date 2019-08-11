@@ -1,29 +1,26 @@
-
 buildscript {
     ext {
         springBootVersion = '2.1.6.RELEASE'
     }
-
     repositories {
         mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath('io.spring.gradle:dependency-management-plugin:1.0.0.RELEASE')
+        classpath "io.spring.gradle:dependency-management-plugin:0.6.0.RELEASE"
+
     }
 }
 
 subprojects {
-//    apply plugin: 'io.spring.dependency-management'
-
+    
     apply plugin: 'java'
     apply plugin: 'eclipse'
-    apply plugin: 'idea'
     apply plugin: 'org.springframework.boot'
-
+    apply plugin: 'io.spring.dependency-management'
+    
     sourceCompatibility = 1.8
     repositories {
-        mavenLocal()
         mavenCentral()
     }
 
@@ -54,7 +51,6 @@ subprojects {
     }
     dependencies {
         implementation 'org.springframework.boot:spring-boot-starter-web'
-
         implementation 'org.springframework.boot:spring-boot-starter-actuator'
 
         compileOnly 'org.projectlombok:lombok'
