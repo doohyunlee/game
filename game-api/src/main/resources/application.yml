@@ -37,7 +37,7 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 
 server:
-  port: 8082
+  port: 8081
 
 elasticsearch:
   host: 3.112.180.197
@@ -78,7 +78,7 @@ mybatis:
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 
 server:
-  port: 8080
+  port: 8081
 
 elasticsearch:
   host: 172.31.13.241
