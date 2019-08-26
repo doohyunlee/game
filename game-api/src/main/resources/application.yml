@@ -32,21 +32,21 @@ spring:
       max-file-size: 50MB
       max-request-size: 50MB
 
-mybatis:
-  type-aliases-package: com.revu.indexer.mapper
-  mapper-locations: classpath:mybatis/mapper/**/*.xml
+#mybatis:
+#  type-aliases-package: com.revu.indexer.mapper
+#  mapper-locations: classpath:mybatis/mapper/**/*.xml
 
 server:
   port: 8081
 
-elasticsearch:
-  host: 3.112.180.197
-  port: 9200
-  type: _doc
-  user: revu
-  password: revu$R%T^Y
-  shards: 2
-  replicas: 0
+#elasticsearch:
+#  host: 3.112.180.197
+#  port: 9200
+#  type: _doc
+#  user: revu
+#  password: revu$R%T^Y
+#  shards: 2
+#  replicas: 0
 
 aws:
   s3:
